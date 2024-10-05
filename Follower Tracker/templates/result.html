@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Following Back</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>These people don't follow you back:</h1>
+        <ul class="not-following-back">
+            {% for user in not_following_back %}
+            <li>{{ user }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="back-button">Go Back</a>
+    </div>
+</body>
+
+</html>
